@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Project Run"
+config/version="0.1.0"
 run/main_scene="uid://cqyntkeopx0pm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [input]
 
