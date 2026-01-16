@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv3mmfopjff0e"]
+
+[ext_resource type="Texture2D" uid="uid://bcf13312ynams" path="res://assets/Full Tileset.png" id="1_5cxma"]
+[ext_resource type="Script" uid="uid://difyqucgom2al" path="res://scenes/gem.gd" id="1_mpwtx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpwtx"]
+radius = 4.0
+
+[node name="Gem" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_mpwtx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5cxma")
+region_enabled = true
+region_rect = Rect2(184, 40, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mpwtx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

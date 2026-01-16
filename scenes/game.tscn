@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://cqyntkeopx0pm"]
+[gd_scene load_steps=11 format=4 uid="uid://cqyntkeopx0pm"]
 
 [ext_resource type="PackedScene" uid="uid://pyjgv3sn44qg" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bcf13312ynams" path="res://assets/Full Tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bibgijhhhti01" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ck0dcfwu3s0te" path="res://scenes/coin.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dv3mmfopjff0e" path="res://scenes/gem.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -357,12 +358,9 @@ position_smoothing_enabled = true
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("3_lnu2h")]
-position = Vector2(64, 96)
-
-[node name="Platform2" parent="Platforms" instance=ExtResource("3_lnu2h")]
 position = Vector2(396, 132)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
 libraries = {
 &"": SubResource("AnimationLibrary_iywne")
 }
@@ -382,8 +380,10 @@ position = Vector2(304, 128)
 [node name="Coin4" parent="Coins" instance=ExtResource("4_lbhrr")]
 position = Vector2(368, 120)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("4_lbhrr")]
-position = Vector2(536, 120)
+[node name="Gem" type="Node" parent="."]
 
-[node name="Coin6" parent="Coins" instance=ExtResource("4_lbhrr")]
+[node name="Gem" parent="Gem" instance=ExtResource("5_iywne")]
+position = Vector2(552, 120)
+
+[node name="Gem2" parent="Gem" instance=ExtResource("5_iywne")]
 position = Vector2(648, 104)
