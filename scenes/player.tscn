@@ -1,7 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://pyjgv3sn44qg"]
+[gd_scene load_steps=17 format=3 uid="uid://pyjgv3sn44qg"]
 
 [ext_resource type="Texture2D" uid="uid://bm5neru6c8u22" path="res://assets/Player and Enemy Animation Strips.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://byguc2kc21eih" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -49,6 +53,14 @@ region = Rect2(128, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2els")
@@ -109,7 +121,7 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"idle"
+animation = &"dash"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
