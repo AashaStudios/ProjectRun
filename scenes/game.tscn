@@ -111,6 +111,9 @@ position = Vector2(568, 168)
 [node name="Gem2" parent="Gem" instance=ExtResource("6_gee14")]
 position = Vector2(848, 144)
 
+[node name="Gem3" parent="Gem" instance=ExtResource("6_gee14")]
+position = Vector2(80, 184)
+
 [node name="Killzone" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(0, 256)
 
