@@ -1,6 +1,9 @@
 extends Area2D
 
 
+@onready var game_manager: Node = %GameManager
+
+
 func _ready() -> void:
     var tween := create_tween()
     tween.set_loops()
@@ -9,5 +12,6 @@ func _ready() -> void:
 
 
 func _on_body_entered(_body: Node2D) -> void:
-    print("+1 Gem")
+    game_manager.gems += 1
+    print("Gems: " + str(game_manager.gems))
     queue_free()
