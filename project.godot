@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Run"
-config/version="0.1.0"
+config/version="v0.2.0-alpha"
 run/main_scene="uid://cqyntkeopx0pm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
