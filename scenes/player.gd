@@ -4,7 +4,7 @@ extends CharacterBody2D
 const MAX_SPEED: int = 200
 const ACCELERATION: int = 17
 const FRICTION: int = 20
-const JUMP_VELOCITY: int = -275
+const JUMP_VELOCITY: int = -250
 
 var coyote_time_activated: bool = false
 
@@ -40,9 +40,9 @@ func handle_jump() -> void:
             coyote_time_activated = true
         
         if Input.is_action_just_released("jump") or is_on_ceiling():
-            velocity.y *= 0.5
+            velocity.y *= 0.25
     
-    if Input.is_action_pressed("jump"):
+    if Input.is_action_just_pressed("jump"):
         if jump_buffer_timer.is_stopped():
             jump_buffer_timer.start()
     
