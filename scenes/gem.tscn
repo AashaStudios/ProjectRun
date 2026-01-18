@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv3mmfopjff0e"]
+[gd_scene load_steps=5 format=3 uid="uid://dv3mmfopjff0e"]
 
 [ext_resource type="Texture2D" uid="uid://bcf13312ynams" path="res://assets/Full Tileset.png" id="1_5cxma"]
 [ext_resource type="Script" uid="uid://difyqucgom2al" path="res://scenes/gem.gd" id="1_mpwtx"]
+[ext_resource type="AudioStream" uid="uid://dowv4b517bpnj" path="res://assets/sound_effects/retro_coin.mp3" id="3_bhq7q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mpwtx"]
 radius = 4.0
@@ -17,5 +18,8 @@ region_rect = Rect2(184, 40, 8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mpwtx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bhq7q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
