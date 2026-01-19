@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://scim2tokir1y"
-path="res://.godot/imported/Object Animation Strips.png-8a1765dd44afd94b7af773c4c3e14d03.ctex"
+uid="uid://8e7yxia1nxfh"
+path="res://.godot/imported/trees_background.png-6389cb2098dc55c64c252339498d4b70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Object Animation Strips.png"
-dest_files=["res://.godot/imported/Object Animation Strips.png-8a1765dd44afd94b7af773c4c3e14d03.ctex"]
+source_file="res://assets/trees_background.png"
+dest_files=["res://.godot/imported/trees_background.png-6389cb2098dc55c64c252339498d4b70.ctex"]
 
 [params]
 

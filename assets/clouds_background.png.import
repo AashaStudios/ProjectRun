@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm5neru6c8u22"
-path="res://.godot/imported/Player and Enemy Animation Strips.png-d5f55ab6a077383d2fde6ac20da6c116.ctex"
+uid="uid://dmft0gnlcqcra"
+path="res://.godot/imported/clouds_background.png-2170614ded6b417ccfe3f96330dcb5da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player and Enemy Animation Strips.png"
-dest_files=["res://.godot/imported/Player and Enemy Animation Strips.png-d5f55ab6a077383d2fde6ac20da6c116.ctex"]
+source_file="res://assets/clouds_background.png"
+dest_files=["res://.godot/imported/clouds_background.png-2170614ded6b417ccfe3f96330dcb5da.ctex"]
 
 [params]
 

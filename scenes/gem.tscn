@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dv3mmfopjff0e"]
 
-[ext_resource type="Texture2D" uid="uid://bcf13312ynams" path="res://assets/Full Tileset.png" id="1_5cxma"]
+[ext_resource type="Texture2D" uid="uid://bcf13312ynams" path="res://assets/full_tileset.png" id="1_5cxma"]
 [ext_resource type="Script" uid="uid://difyqucgom2al" path="res://scenes/gem.gd" id="1_mpwtx"]
 [ext_resource type="AudioStream" uid="uid://dowv4b517bpnj" path="res://assets/sound_effects/retro_coin.mp3" id="3_bhq7q"]
 

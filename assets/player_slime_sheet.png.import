@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8e7yxia1nxfh"
-path="res://.godot/imported/Trees Background.png-8a167c3431797ecb144696ceafd59287.ctex"
+uid="uid://bm5neru6c8u22"
+path="res://.godot/imported/player_slime_sheet.png-a14dbf550743a0303e1eae9344b75807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trees Background.png"
-dest_files=["res://.godot/imported/Trees Background.png-8a167c3431797ecb144696ceafd59287.ctex"]
+source_file="res://assets/player_slime_sheet.png"
+dest_files=["res://.godot/imported/player_slime_sheet.png-a14dbf550743a0303e1eae9344b75807.ctex"]
 
 [params]
 

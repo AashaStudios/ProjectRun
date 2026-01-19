@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://ck0dcfwu3s0te"]
 
 [ext_resource type="Script" uid="uid://b77lyr0vrp4rw" path="res://scenes/coin.gd" id="1_i64fm"]
-[ext_resource type="Texture2D" uid="uid://scim2tokir1y" path="res://assets/Object Animation Strips.png" id="1_rwqht"]
+[ext_resource type="Texture2D" uid="uid://scim2tokir1y" path="res://assets/object_animation_sheet.png" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://dowv4b517bpnj" path="res://assets/sound_effects/retro_coin.mp3" id="3_11l1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
