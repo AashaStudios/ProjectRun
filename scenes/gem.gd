@@ -2,6 +2,7 @@ extends Area2D
 
 
 @onready var game_manager: Node = %GameManager
+@onready var gem_count_label: Label = %GemCountLabel
 
 
 func _ready() -> void:
@@ -13,7 +14,6 @@ func _ready() -> void:
 
 func _on_body_entered(_body: Node2D) -> void:
     game_manager.gems += 1
-    print("Gems: " + str(game_manager.gems))
     
     var pitch_value: float = randf_range(0.9, 1.1)
     

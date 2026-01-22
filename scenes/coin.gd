@@ -6,7 +6,6 @@ extends Area2D
 
 func _on_body_entered(_body: Node2D) -> void:
     game_manager.coins += 1
-    print("Coins: " + str(game_manager.coins))
     
     var pitch_value: float = randf_range(0.9, 1.1)
     

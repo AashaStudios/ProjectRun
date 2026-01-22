@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cqyntkeopx0pm"]
+[gd_scene load_steps=20 format=4 uid="uid://cqyntkeopx0pm"]
 
 [ext_resource type="TileSet" uid="uid://dab4l5t7e17oq" path="res://scenes/game.tres" id="1_lnu2h"]
 [ext_resource type="Script" uid="uid://cx8jwltfcsus3" path="res://scenes/game_manager.gd" id="1_p57ef"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8ipipvem2egj" path="res://scenes/slime.tscn" id="6_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dv3mmfopjff0e" path="res://scenes/gem.tscn" id="7_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dmft0gnlcqcra" path="res://assets/clouds_background.png" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://bypmvksynnf7i" path="res://scenes/game_hud.tscn" id="12_dinhu"]
 
 [sub_resource type="Animation" id="Animation_kvpfn"]
 length = 0.001
@@ -297,3 +298,12 @@ position = Vector2(0, 256)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameHUD" parent="CanvasLayer" instance=ExtResource("12_dinhu")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
