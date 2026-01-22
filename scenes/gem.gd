@@ -2,7 +2,6 @@ extends Area2D
 
 
 @onready var game_manager: Node = %GameManager
-@onready var gem_count_label: Label = %GemCountLabel
 
 
 func _ready() -> void:

@@ -20,10 +20,10 @@ script = ExtResource("1_pexd4")
 
 [node name="Coins" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 76.0
-offset_bottom = 20.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 16.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_gjmhc")
 
 [node name="CoinImage" type="Panel" parent="Coins"]
@@ -31,9 +31,8 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
 offset_top = -4.0
-offset_right = 16.0
+offset_right = 8.0
 offset_bottom = 4.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_pexd4")
@@ -54,22 +53,22 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -8.0
-offset_right = -8.0
-offset_bottom = 8.0
+offset_left = -24.0
+offset_top = -4.0
+offset_bottom = 4.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_font_sizes/font_size = 8
 text = "x C"
 vertical_alignment = 2
 
 [node name="Gems" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 24.0
-offset_right = 76.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 28.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_gjmhc")
 
 [node name="GemImage" type="Panel" parent="Gems"]
@@ -77,9 +76,8 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
 offset_top = -4.0
-offset_right = 16.0
+offset_right = 8.0
 offset_bottom = 4.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_pexd4")
@@ -100,12 +98,11 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -8.0
-offset_right = -8.0
-offset_bottom = 8.0
+offset_left = -24.0
+offset_top = -4.0
+offset_bottom = 4.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_font_sizes/font_size = 8
 text = "x C"
-vertical_alignment = 2
