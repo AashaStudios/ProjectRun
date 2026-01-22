@@ -5,10 +5,10 @@ const MAX_SPEED: int = 200
 const ACCELERATION: int = 17
 const FRICTION: int = 20
 const JUMP_VELOCITY: int = -250
+const DASH_VELOCITY: int = 600
 
 var coyote_time_activated: bool = false
-var state: String = "idle"
-var states: Array = ["idle", "running", "jumping", "dashing"]
+var dashing: bool = false
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var coyote_timer: Timer = $Timers/CoyoteTimer
@@ -20,6 +20,11 @@ var states: Array = ["idle", "running", "jumping", "dashing"]
 func _physics_process(delta: float) -> void:
     if not is_on_floor():
         velocity += get_gravity() * delta
+    
+    handle_dash()
+    
+    if dashing:
+        return
     
     var direction: float = Input.get_axis("left", "right")
     
@@ -34,17 +39,26 @@ func _physics_process(delta: float) -> void:
 func handle_running(delta: float, direction: float) -> void:
     var velocity_weight: float = delta * (ACCELERATION if direction else FRICTION)
     velocity.x = lerp(velocity.x, direction * MAX_SPEED, velocity_weight)
-    
-    if direction != 0 and is_on_floor():
-        state = "running"
 
 
 func handle_dash() -> void:
     if Input.is_action_just_pressed("dash") and dash_cooltime_timer.is_stopped():
         dash_timer.start()
         dash_cooltime_timer.start()
-        state = "dashing"
-        print(state)
+    
+    if not dash_timer.is_stopped():
+        velocity.y = 0
+        sprite.play("dash")
+        dashing = true
+        if sprite.flip_h == false:
+            velocity.x = DASH_VELOCITY
+        else:
+            velocity.x = -DASH_VELOCITY
+        
+        move_and_slide()
+    
+    if dash_timer.is_stopped():
+        dashing = false
 
 
 func handle_jump() -> void:
@@ -67,7 +81,6 @@ func handle_jump() -> void:
         jump_buffer_timer.stop()
         coyote_timer.stop()
         coyote_time_activated = true
-        state = "jumping"
 
 
 func handle_animation(direction: float) -> void:
