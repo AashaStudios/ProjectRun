@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bypmvksynnf7i"]
+[gd_scene load_steps=8 format=3 uid="uid://bypmvksynnf7i"]
 
 [ext_resource type="Texture2D" uid="uid://bfa6n8gt6ov30" path="res://assets/coin.png" id="1_jna2d"]
 [ext_resource type="Script" uid="uid://c2sf2xr33jj35" path="res://scenes/game_hud.gd" id="1_pexd4"]
-[ext_resource type="FontFile" uid="uid://c00l8pk75hsp0" path="res://assets/minecraft.ttf" id="2_n64bn"]
+[ext_resource type="FontFile" uid="uid://cjrly1y1aelih" path="res://assets/fonts/dogicapixel.ttf" id="3_b3s3x"]
 [ext_resource type="Texture2D" uid="uid://3iaabww1p5dh" path="res://assets/gem.png" id="3_gjmhc"]
+[ext_resource type="FontFile" uid="uid://chegsxdqloh1h" path="res://assets/fonts/dogica.ttf" id="5_b3s3x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjmhc"]
 
@@ -58,9 +59,9 @@ offset_top = -4.0
 offset_bottom = 4.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_fonts/font = ExtResource("3_b3s3x")
 theme_override_font_sizes/font_size = 8
-text = "x C"
+text = "xC"
 vertical_alignment = 2
 
 [node name="Gems" type="Panel" parent="."]
@@ -103,21 +104,53 @@ offset_top = -4.0
 offset_bottom = 4.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_fonts/font = ExtResource("3_b3s3x")
 theme_override_font_sizes/font_size = 8
-text = "x C"
+text = "xC"
 
 [node name="StopwatchLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -34.0
+offset_left = -64.0
 offset_top = 8.0
 offset_right = -8.0
 offset_bottom = 16.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_fonts/font = ExtResource("5_b3s3x")
 theme_override_font_sizes/font_size = 8
 text = "00:00.0"
 clip_text = true
+
+[node name="DashCooldown" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DashImage" type="Panel" parent="DashCooldown"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="DashCooldown"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -5.5
+offset_bottom = 5.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b3s3x")
+theme_override_font_sizes/font_size = 8

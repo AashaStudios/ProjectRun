@@ -8,8 +8,8 @@ extends Control
 
 
 func _process(_delta: float) -> void:
-    coin_count_label.text = " x " + str(game_manager.coins)
-    gem_count_label.text = " x " + str(game_manager.gems)
+    coin_count_label.text = "x" + str(game_manager.coins)
+    gem_count_label.text = "x" + str(game_manager.gems)
     
     update_time(game_manager.stopwatch_time)
 
