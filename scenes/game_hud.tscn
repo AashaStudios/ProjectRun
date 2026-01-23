@@ -106,3 +106,18 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_n64bn")
 theme_override_font_sizes/font_size = 8
 text = "x C"
+
+[node name="StopwatchLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 16.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_font_sizes/font_size = 8
+text = "00:00.0"
+clip_text = true

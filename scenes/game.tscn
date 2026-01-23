@@ -302,8 +302,3 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameHUD" parent="CanvasLayer" instance=ExtResource("12_dinhu")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
