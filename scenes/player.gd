@@ -15,6 +15,7 @@ var dashing: bool = false
 @onready var jump_buffer_timer: Timer = $Timers/JumpBufferTimer
 @onready var dash_timer: Timer = $Timers/DashTimer
 @onready var dash_cooltime_timer: Timer = $Timers/DashCooltimeTimer
+@onready var game_manager: Node = %GameManager
 
 
 func _physics_process(delta: float) -> void:
@@ -59,6 +60,12 @@ func handle_dash() -> void:
     
     if dash_timer.is_stopped():
         dashing = false
+    
+    if dash_cooltime_timer.is_stopped():
+        game_manager.can_dash = true
+    else:
+        game_manager.can_dash = false
+        game_manager.dash_cooldown_time = dash_cooltime_timer.time_left
 
 
 func handle_jump() -> void:
