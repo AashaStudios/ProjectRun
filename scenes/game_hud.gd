@@ -18,10 +18,9 @@ func _process(_delta: float) -> void:
 
 func update_time(time_in_seconds: float) -> void:
     var minutes: int = int(time_in_seconds / 60) % 60
-    var seconds: int = int(time_in_seconds) % 60
-    var milliseconds: int = int(time_in_seconds * 1000.0) % 1000
+    var seconds: float = fmod(time_in_seconds, 60)
     
-    stopwatch_label.text = "%02d:%02d.%01d" % [minutes, seconds, milliseconds]
+    stopwatch_label.text = "%02d:%04.1f" % [minutes, seconds]
 
 
 func update_dash_cooldown() -> void:
