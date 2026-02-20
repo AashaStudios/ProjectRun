@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cxl6xh0uhemvx"]
+
+[ext_resource type="Script" uid="uid://c36opaes2iy2n" path="res://scenes/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://g74s31s2hija" path="res://assets/fonts/dogicapixelbold.ttf" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cjrly1y1aelih" path="res://assets/fonts/dogicapixel.ttf" id="2_bqqt6"]
+
+[node name="MainMenu" type="Control" unique_id=395476146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="GameTitle" type="Label" parent="." unique_id=2064377147]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 47.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 16
+text = "Project Run"
+
+[node name="Buttons" type="BoxContainer" parent="." unique_id=1773891079]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -18.0
+offset_right = 32.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons" unique_id=259482401]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="PlayButton" type="Button" parent="Buttons/VBoxContainer" unique_id=1259404869]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 8
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="Buttons/VBoxContainer" unique_id=1090873375]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 8
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="Buttons/VBoxContainer" unique_id=1625227634]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 8
+text = "Exit"
+
+[connection signal="pressed" from="Buttons/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

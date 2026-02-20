@@ -11,7 +11,6 @@ var dash_cooldown_time: float = 0
 
 func _ready() -> void:
     RenderingServer.set_default_clear_color(Color(0.53, 0.81, 0.92))
-    Engine.time_scale = 5
 
 
 func _process(delta: float) -> void:
