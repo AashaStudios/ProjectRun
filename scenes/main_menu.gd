@@ -2,8 +2,7 @@ extends Control
 
 
 func _on_play_button_pressed() -> void:
-    #SceneTransition.change_scene_to("res://scenes/game.tscn")
-    pass
+    SceneTransition.change_scene_to("res://scenes/game.tscn")
 
 
 func _on_settings_button_pressed() -> void:
