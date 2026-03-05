@@ -15,7 +15,7 @@ func change_scene_to(scene_path: String) -> void:
     get_tree().paused = true
     
     color_rect_tween = create_tween().set_trans(Tween.TRANS_SINE)
-    color_rect_tween.tween_property(color_rect, "color", Color(0.0, 0.0, 0.0, 1.0), 0.3).connect("finished", _load_new_scene)
+    color_rect_tween.tween_property(color_rect, "color", Color(0.0, 0.0, 0.0, 1.0), 0.4).connect("finished", _load_new_scene)
     color_rect_tween.chain().tween_property(color_rect, "color", Color(0.0, 0.0, 0.0, 0.0), 0.4)
 
 
